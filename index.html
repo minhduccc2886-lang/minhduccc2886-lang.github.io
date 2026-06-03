@@ -168,6 +168,21 @@
         95% { transform: translateX(-80%); }
         100% { transform: translateX(0%); }
     }
+      .stats-bar {
+    display: flex;
+    flex-wrap: wrap;         /* Giúp tự động xuống dòng khi màn hình nhỏ */
+    justify-content: center; /* Căn giữa các item */
+    gap: 20px;               /* Khoảng cách giữa các ô thông số */
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.stat-item {
+    flex: 1 1 150px;         /* Tự co giãn, tối thiểu 150px mỗi ô */
+    text-align: center;
+    margin: 10px;            /* Thêm khoảng cách nếu cần */
+}  
 </style>
 </div>
    
@@ -343,7 +358,7 @@
 
 
 </body>
-    <!-- KHỐI THÔNG SỐ (STATS BAR) -->
+    
     <div class="stats-bar">
         <div class="stat-item">
             <span class="stat-number">2,500+</span>
@@ -361,5 +376,5 @@
             <span class="stat-number">0%</span>
             <span class="stat-label">Phí</span>
         </div>
-</html>
+</body>
 
