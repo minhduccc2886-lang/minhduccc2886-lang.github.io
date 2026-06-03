@@ -127,27 +127,20 @@
 
     <style>
     /* Container chứa slider */
-/* Khung bọc ngoài cùng - Đóng vai trò là cửa sổ nhìn */
-.slider-container {
-    width: 100%;
-    max-width: 1400px; /* Điều chỉnh tùy ý */
-    margin: 0 auto;
-    overflow: hidden;  /* Quan trọng: Cắt phần ảnh dư thừa */
-}
-
-/* Đường ray chứa ảnh */
+/* Khung bọc ngoài (Cửa sổ nhìn) - Phải có overflow: hidden */
 .slider-wrapper {
-    display: flex;
-    width: 500%; /* Nếu có 5 ảnh */
-    animation: slide-animation 20s linear infinite; /* Chạy liên tục không dừng */
+    width: 100%;           /* Khung nhìn chỉ rộng 100% màn hình */
+    overflow: hidden;      /* Cắt bỏ mọi thứ dư thừa */
+    position: relative;
+    margin-top: 10px;
 }
 
-    /* Wrapper giữ các ảnh nằm ngang */
-    .slider-wrapper {
-        display: flex;
-        width: 500%; /* Vì bạn có 5 ảnh nên 500% là chuẩn */
-        animation: slide-animation 20s infinite; /* Tự chạy vòng lặp 20 giây */
-    }
+/* Đường ray chứa 5 ảnh - Phải rộng 500% */
+.slider-container {
+    display: flex;         /* Dùng flex để dàn hàng ngang */
+    width: 500%;           /* 5 ảnh = 500% */
+    transition: transform 0.6s ease-in-out;
+}
 
     /* Mỗi slide chiếm 20% chiều rộng (100 chia 5 ảnh) */
     .slide {
