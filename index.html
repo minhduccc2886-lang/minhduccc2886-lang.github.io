@@ -126,14 +126,14 @@
 
     <style>
     /* Container chứa slider */
-    .slider-container {
-
-    width: 90%;          /* Chiếm 90% màn hình thôi */
-    max-width: 800px;    /* Giới hạn tối đa 800px, không cho to hơn */
-    margin: 0 auto;      /* Căn giữa slider */
-    overflow: hidden;
-    border-radius: 8px;
+  .slider-container {
+    width: 95%;
+    max-width: 950px;
+    margin: 20px auto;
+    overflow: hidden; /* Dòng này cực kỳ quan trọng */
+    border-radius: 12px;
 }
+
     
 
     /* Wrapper giữ các ảnh nằm ngang */
@@ -293,23 +293,7 @@
             <a href="#" class="lang-btn">Русский</a>
             <a href="#" class="lang-btn">Türkçe</a>
             <a href="#" class="lang-btn">Filipino</a>
-     <div class="stats-bar">
-        <div class="stat-item">
-            <span class="stat-number">2,500+</span>
-            <span class="stat-label">Trò chơi</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">13</span>
-            <span class="stat-label">Ngôn ngữ</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">30s</span>
-            <span class="stat-label">Nạp/Rút</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">0%</span>
-            <span class="stat-label">Phí</span>
-        </div>
+  
         <body>
 <!-- KHỐI BANNER CHẠY LƯỚT TỰ ĐỘNG -->
 <div class="slider-container">
@@ -354,7 +338,7 @@
 
             // Cứ mỗi 3000ms (3 giây) là ảnh tự động lướt lướt qua tấm tiếp theo
             setInterval(changeSlide, 3000);
-        })();
+       
     </script>
 
 
