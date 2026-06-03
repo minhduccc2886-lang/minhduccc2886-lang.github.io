@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UBOSS Official Site</title>
     <style>
-        /* 1. Cài đặt màu nền đen tuyền cho toàn bộ trang web */
         body {
             background-color: #05070c;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 20px 0 0 0;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* 2. Style cho phần chữ tiêu đề phía trên */
         .brand-title {
-            color: #ff2a6d; /* Màu hồng neon */
+            color: #ff2a6d;
             font-size: 42px;
             font-weight: bold;
             margin-bottom: 5px;
@@ -31,19 +30,20 @@
             color: #cccccc;
             font-size: 16px;
             margin-bottom: 25px;
+            line-height: 1.4;
         }
 
         .main-heading {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: bold;
             line-height: 1.4;
             margin-bottom: 30px;
+            text-align: left;
         }
 
-        /* 3. Style cho thanh Menu (Logo + Nút bấm) */
         .navbar {
-            background-color: #0b111e; /* Nền xanh đen tối */
-            border-radius: 8px;
+            background-color: #0b111e;
+            border-radius: 8px 8px 0 0;
             padding: 12px 20px;
             display: flex;
             justify-content: space-between;
@@ -53,7 +53,7 @@
         .logo {
             font-weight: bold;
             font-size: 20px;
-            color: #00ffff; /* Màu Cyan của logo */
+            color: #00ffff;
         }
 
         .nav-buttons {
@@ -63,74 +63,112 @@
 
         .btn {
             padding: 8px 18px;
-            border-radius: 20px; /* Bo tròn nút */
+            border-radius: 20px;
             text-decoration: none;
             font-weight: bold;
             font-size: 14px;
         }
 
         .btn-cskh {
-            background-color: transparent;
+            background-color: #0d1b2a;
             color: #00ffff;
             border: 1px solid #00ffff;
         }
 
         .btn-register {
-            background-color: #00a2ff; /* Màu xanh dương của nút Đăng Ký */
             color: #ffffff;
             border: none;
+            animation: pulseBg 2s infinite;
         }
 
-        /* 4. Style cho hàng nút chọn ngôn ngữ */
+        @keyframes pulseBg {
+            0% { background-color: #00a2ff; box-shadow: 0 0 10px #00a2ff; }
+            50% { background-color: #ff2a6d; box-shadow: 0 0 20px #ff2a6d; }
+            100% { background-color: #00a2ff; box-shadow: 0 0 10px #00a2ff; }
+        }
+
         .lang-bar {
-            margin-top: 15px;
+            background-color: #070d19;
+            padding: 10px 20px;
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
+            justify-content: center;
+            border-top: 1px solid #162235;
+            margin-bottom: 0;
         }
 
         .lang-btn {
             background-color: #162235;
             color: #999999;
-            padding: 6px 12px;
+            padding: 4px 12px;
             border-radius: 15px;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .lang-btn.active {
             background-color: #00a2ff;
             color: #ffffff;
         }
+
+        .banner-container {
+            width: 100%;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Phần chữ tiêu đề -->
+        <!-- Bộ chữ tiếng Anh chuyên nghiệp mới -->
         <div class="brand-title">UBOSS</div>
-        <div class="sub-title">Official Site | Sportsbook & Casino | Fast USDT Withdrawals</div>
-        <div class="main-heading">UBOSS | Licensed Online Sportsbook & Casino | Fast USDT Withdrawals</div>
+        <div class="sub-title">Official Affiliate Network | Secure & Ultra-Fast USDT Withdrawals 24/7</div>
+        <div class="main-heading">UBOSS | Globally Licensed Platform | Elite Sportsbook & Live Casino</div>
 
-        <!-- Thanh Menu điều hướng -->
+        <!-- Thanh Menu Logo + Nút điều hướng -->
         <div class="navbar">
             <div class="logo">💎 UBOSS</div>
             <div class="nav-buttons">
-                <!-- https://t.me/Jenniii666 -->
-                <a href="#" class="btn btn-cskh">💬 CSKH</a>
-                <!-- https://97y.me/YujfJ -->
-                <a href="#" class="btn btn-register">🎮 Đăng Ký</a>
+                <!-- https://97y.me/YujfJ-->
+                <a href="https://t.me/Jenniii666" class="btn btn-cskh">💬 CSKH</a>
+                <a href="https://97y.me/YujfJ" class="btn btn-register">🎮 Đăng Ký</a>
             </div>
         </div>
 
-        <!-- Hàng nút chọn ngôn ngữ -->
+
+           <!-- Hàng nút chọn 15 ngôn ngữ quốc tế -->
         <div class="lang-bar">
             <a href="#" class="lang-btn active">Tiếng Việt</a>
             <a href="#" class="lang-btn">English</a>
             <a href="#" class="lang-btn">简体中文</a>
             <a href="#" class="lang-btn">한국어</a>
             <a href="#" class="lang-btn">日本語</a>
+            <a href="#" class="lang-btn">ภาษาไทย</a>
+            <a href="#" class="lang-btn">Bahasa Indonesia</a>
+            <a href="#" class="lang-btn">Português</a>
+            <a href="#" class="lang-btn">Español</a>
+            <a href="#" class="lang-btn">Deutsch</a>
+            <a href="#" class="lang-btn">Français</a>
+            <a href="#" class="lang-btn">Русский</a>
+            <a href="#" class="lang-btn">Türkçe</a>
+            <a href="#" class="lang-btn">Filipino</a>
+            <a href="#" class="lang-btn">हिन्दी</a>
         </div>
+        </div>
+    </div>
+
+    <!-- Khối banner hình ảnh dưới cùng -->
+    <div class="banner-container">
+        <!-- KHI NÀO CÓ ẢNH AI THÌ ĐỔI CÁI LINK TRONG NGOẶC KÉP NÀY NHA -->
+        <img src="https://via.placeholder.com/1920x640" alt="UBOSS Live Casino Banner">
     </div>
 
 </body>
