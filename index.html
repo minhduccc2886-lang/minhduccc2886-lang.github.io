@@ -160,14 +160,131 @@
             <a href="#" class="lang-btn">Русский</a>
             <a href="#" class="lang-btn">Türkçe</a>
             <a href="#" class="lang-btn">Filipino</a>
-            <a href="#" class="lang-btn">हिन्दी</a>
+    
         </div>
         </div>
     </div>
 
     <!-- Khối banner hình ảnh dưới cùng -->
     <div class="banner-container">
-  
+  <!-- KHỐI BANNER CHẠY LƯỚT TỰ ĐỘNG (SLIDER CAROUSEL) -->
+    <div class="slider-wrapper">
+        <div class="slider-container" id="mainSlider">
+            <!-- Tấm ảnh 1 (Ảnh Dealer Casino hiện tại của bạn) -->
+            <div class="slide">
+                <img src="https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/refs/heads/main/35642250-48b6-4ba5-8846-39ff49251f67.jfif" alt="UBOSS Live Casino Banner">
+            </div>
+            
+            <!-- Tấm ảnh 2 (Mẫu Thể thao 1 ) -->
+            <div class="slide">
+                <img src="https://via.placeholder.com/1920x640/1a1a2e/ffffff?text=UBOSS+Sports+Betting+Banner+1" alt="UBOSS Sports Banner 1">
+            </div>
+            
+            <!-- Tấm ảnh 3 (Mẫu Thể thao 2) -->
+            <div class="slide">
+                <img src="https://via.placeholder.com/1920x640/0f3460/ffffff?text=UBOSS+World+Cup+Event+Banner+2" alt="UBOSS Sports Banner 2">
+            </div>
+            
+            <!-- Tấm ảnh 4 (Mẫu Slot Game / Nổ hũ) -->
+            <div class="slide">
+                <img src="https://via.placeholder.com/1920x640/16213e/ffffff?text=UBOSS+Slots+Game+Jackpot+Banner+3" alt="UBOSS Slots Banner">
+            </div>
+
+            <!-- Tấm ảnh 5 (Mẫu Khuyến mãi hoàn trả) -->
+            <div class="slide">
+                <img src="https://via.placeholder.com/1920x640/1b1a17/ffffff?text=UBOSS+Daily+Cashback+Promotion+Banner+4" alt="UBOSS Cashback Banner">
+            </div>
+        </div>
+
+        <!-- Các dấu chấm tròn nhỏ định vị dưới banner -->
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- PHẦN STYLE TRANG TRÍ CHO BANNER CHẠY MƯỢT (CSS) -->
+    <style>
+        .slider-wrapper {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 10px; /* Khoảng cách với khối bên trên */
+        }
+        .slider-container {
+            display: table;
+            width: 500%; /* Tổng độ rộng bằng số lượng ảnh x 100% (5 ảnh = 500%) */
+            transition: transform 0.6s ease-in-out; /* Tốc độ lướt qua mượt mà */
+        }
+        .slide {
+            display: table-cell;
+            width: 20%; /* Mỗi ảnh chiếm 1 phần đều nhau (100% / 5 ảnh = 20%) */
+            vertical-align: top;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Style cho các nút chấm tròn nhỏ */
+        .slider-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #00ffcc; /* Màu xanh neon trùng tông nút Đăng Ký của bạn */
+            width: 20px; /* Làm chấm tròn dài ra chút nhìn cho sang */
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
+    <script>
+        (function() {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            const sliderContainer = document.getElementById('mainSlider');
+            const dots = document.querySelectorAll('.dot');
+
+            function changeSlide() {
+                currentIndex++;
+                if (currentIndex >= totalSlides) {
+                    currentIndex = 0; // Chạy hết 5 tấm thì tự động quay về tấm đầu tiên
+                }
+                
+                // Tính toán khoảng cách lướt sang trái theo phần trăm
+                let translateValue = -(currentIndex * 20); 
+                sliderContainer.style.transform = `translateX(${translateValue}%)`;
+                
+                // Cập nhật trạng thái dấu chấm tròn active
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[currentIndex]) {
+                    dots[currentIndex].classList.add('active');
+                }
+            }
+
+            // Cứ mỗi 3000ms (3 giây) là ảnh tự động lướt lướt qua tấm tiếp theo
+            setInterval(changeSlide, 3000);
+        })();
+    </script>
  <img src=" https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/refs/heads/main/35642250-48b6-4ba5-8846-39ff49251f67.jfif" alt="UBOSS Live Casino Banner">
     </div>
 
