@@ -123,15 +123,19 @@
             height: auto;
             display: block;
         }
-    </style>
+
 </head>
     <style>
     /* Container chứa slider */
     .slider-container {
-        width: 100%;
-        overflow: hidden; /* Che đi phần ảnh nằm ngoài khung hình */
-        border-radius: 8px; /* Bo tròn góc cho đẹp */
-    }
+
+    width: 90%;          /* Chiếm 90% màn hình thôi */
+    max-width: 800px;    /* Giới hạn tối đa 800px, không cho to hơn */
+    margin: 0 auto;      /* Căn giữa slider */
+    overflow: hidden;
+    border-radius: 8px;
+}
+    
 
     /* Wrapper giữ các ảnh nằm ngang */
     .slider-wrapper {
