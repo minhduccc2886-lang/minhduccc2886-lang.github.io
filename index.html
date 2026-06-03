@@ -206,10 +206,12 @@
             margin-top: 10px; /* Khoảng cách với khối bên trên */
         }
         .slider-container {
-            display: table;
-            width: 500%; /* Tổng độ rộng bằng số lượng ảnh x 100% (5 ảnh = 500%) */
-            transition: transform 0.6s ease-in-out; /* Tốc độ lướt qua mượt mà */
-        }
+    width: 100%;       /* Khung chỉ rộng đúng bằng màn hình */
+    max-width: 950px;  /* Tùy chỉnh độ rộng tối đa */
+    margin: 20px auto; /* Căn giữa */
+    overflow: hidden;  /* ĐÂY CHÍNH LÀ CHÌA KHÓA: Nó sẽ cắt bỏ những gì tràn ra ngoài */
+    border-radius: 12px;
+}
         .slide {
             display: table-cell;
             width: 20%; /* Mỗi ảnh chiếm 1 phần đều nhau (100% / 5 ảnh = 20%) */
