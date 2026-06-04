@@ -644,6 +644,176 @@
     color: #ffc107; /* Di chuột vào link đổi sang màu vàng */
     text-decoration: underline;
 }
+/* --- CSS CHO KHỐI CHÂN TRANG (FOOTER) --- */
+.main-footer {
+    width: 100%;
+    background-color: #030508; /* Màu đen sâu hơn để phân biệt với phần thân */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Banner Slogan màu xanh ngọc ở đỉnh footer */
+.footer-top-slogan {
+    background: linear-gradient(135deg, #008b94 0%, #004d54 100%);
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer-top-slogan h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.footer-top-slogan p {
+    font-size: 13px;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Khung chứa nội dung chính */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 30px 20px;
+}
+
+/* Chia lưới 4 cột */
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Cột thương hiệu to hơn các cột khác tí */
+.footer-col.col-brand {
+    grid-column: span 1;
+}
+@media (min-width: 900px) {
+    .footer-col.col-brand { min-width: 300px; }
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00e5ff; /* Màu xanh neon thương hiệu */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-brand-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+
+/* Danh sách menu link */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu li a {
+    color: #94a3b8;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-menu li a:hover {
+    color: #00e5ff;
+}
+
+/* Các nút Mạng xã hội hình tròn */
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background-color: #00e5ff;
+}
+
+/* Nhãn đồng xu và bảo mật */
+.footer-badges-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.crypto-tag, .secure-tag {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Đường gạch ngang phân cách */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 40px 0 30px 0;
+}
+
+/* Bản quyền cuối cùng */
+.footer-bottom {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-bottom p {
+    margin: 4px 0;
+}
+
+.footer-bottom .copyright {
+    margin-top: 15px;
+    color: #94a3b8;
+}
+
+.footer-gcb-logo {
+    margin-top: 20px;
+    display: inline-block;
+}
     </style>
 
     <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
@@ -907,6 +1077,74 @@
         </div>
     </div>
 </section>
+<footer class="main-footer">
+    <div class="footer-top-slogan">
+        <h3>Thương hiệu giải trí tiền điện tử hàng đầu thế giới — Chào mừng đến với UBOSS!</h3>
+        <p>Tham gia UBOSS ngay hôm nay để khám phá hệ thống cá cược mới dẫn đầu bởi USDT. Hệ thống thanh toán an toàn, minh bạch. Đội ngũ hỗ trợ chuyên nghiệp 24/7. UBOSS cam kết mang đến cho người chơi trải nghiệm casino hiện đại, tiện lợi và đáng tin cậy trong kỷ nguyên tiền điện tử!</p>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-links-grid">
+            
+            <div class="footer-col col-brand">
+                <div class="footer-logo">UBOSS</div>
+                <p class="footer-brand-desc">UBOSS – Nền tảng giải trí tiền điện tử, xây dựng hệ thống giải trí lấy USDT làm nền tảng cốt lõi. Ứng dụng công nghệ blockchain, đảm bảo an toàn và minh bạch trong mọi giao dịch.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Về chúng tôi</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tuân thủ pháp lý</a></li>
+                    <li><a href="#">Cá cược có trách nhiệm</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Cam kết người dùng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Cổng vào cộng đồng</h4>
+                <div class="footer-socials">
+                    <a href="https://t.me/..." target="_blank" class="social-icon tg" title="Telegram">✈️</a>
+                    <a href="#" class="social-icon ig" title="Instagram">📸</a>
+                    <a href="#" class="social-icon tt" title="TikTok">🎵</a>
+                    <a href="#" class="social-icon fb" title="Facebook">👍</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ trợ tiền tệ</h4>
+                <div class="footer-badges-group">
+                    <span class="crypto-tag">USDT</span>
+                    <span class="crypto-tag">BTC</span>
+                    <span class="crypto-tag">ETH</span>
+                    <span class="crypto-tag">BNB</span>
+                </div>
+                
+                <h4 style="margin-top: 20px;">Bảo mật & Đối tác</h4>
+                <div class="footer-badges-group">
+                    <span class="secure-tag">🔐 GoDaddy</span>
+                    <span class="secure-tag">🛡️ iovation</span>
+                    <span class="secure-tag">🔞 18+</span>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p>UBOSS thuộc quyền sở hữu và vận hành bởi Osmila N.V.</p>
+            <p>UBOSS được cấp phép và quản lý bởi Curaçao Gaming Control Board</p>
+            <p class="copyright">© Bản quyền thuộc sở hữu của UBOSS</p>
+            
+            <div class="footer-gcb-logo">
+                <span style="background: #ff6b00; color: #fff; padding: 4px 8px; font-weight: bold; border-radius: 4px;">GCB</span>
+                <p style="font-size: 11px; color: #64748b; margin-top: 5px;">Curaçao Gaming Control Board</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
 
