@@ -556,6 +556,94 @@
     margin: 0;
     text-align: justify; /* Căn đều hai bên chữ nhìn cho ngay ngắn */
 }
+   /* --- CSS CHO KHỐI CÂU HỎI THƯỜNG GẶP (TONE XANH ĐEN) --- */
+.faq-section {
+    padding: 60px 20px;
+    width: 100%;
+    background-color: #05070c; /* Màu xanh đen đồng bộ nền web */
+    box-sizing: border-box;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề căn giữa cho đẹp */
+.faq-main-title {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Chia lưới 2 cột mượt mà */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+/* Trên điện thoại nhỏ hơn 600px thì tự động gom thành 1 cột */
+@media (max-width: 600px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Từng ô câu hỏi - Nền tối viền xanh ngọc nhẹ ở cạnh trái giống ảnh gốc */
+.faq-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #00e5ff; /* Thanh màu xanh ngọc làm điểm nhấn bên trái */
+    border-radius: 8px;
+    padding: 24px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #ffc107; /* Di chuột vào đổi thanh highlight sang màu vàng */
+    transform: translateX(4px); /* Nhẹ nhàng nhúc nhích sang phải tạo cảm giác phản hồi */
+}
+
+/* Thẻ tiêu đề câu hỏi bên trong card */
+.faq-card h3 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+}
+
+/* Đoạn nội dung câu trả lời */
+.faq-card p {
+    font-size: 14px;
+    color: #94a3b8; /* Màu chữ xám sáng cực kỳ dễ đọc trên nền tối */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Làm nổi bật các từ quan trọng (thẻ strong) */
+.faq-card strong {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+/* Màu sắc cho các đường link gắn trong câu hỏi */
+.faq-card a, .faq-link {
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.faq-card a:hover, .faq-link:hover {
+    color: #ffc107; /* Di chuột vào link đổi sang màu vàng */
+    text-decoration: underline;
+}
     </style>
 
     <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
@@ -742,6 +830,78 @@
                     <h3>MALTA AUTHORITY</h3>
                     <p>Cơ quan cấp phép trò chơi MGA Châu Âu chứng nhận nền tảng đủ tiềm lực tài chính thanh khoản không giới hạn.</p>
                 </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- KHỐI CÂU HỎI THƯỜNG GẶP (FAQ) - CODE THÊM VÀO ĐÂY -->
+<section class="faq-section">
+    <div class="faq-container">
+        <!-- Tiêu đề khối -->
+        <h2 class="faq-main-title">❓ Câu Hỏi Thường Gặp</h2>
+
+        <!-- Lưới chia 2 cột câu hỏi -->
+        <div class="faq-grid">
+            
+            <!-- Câu 1 -->
+            <div class="faq-card">
+                <h3>▼ UBOSS là gì và có uy tín không?</h3>
+                <p>Nền tảng cá cược được cấp phép bởi <strong>Curaçao Gaming Control Board</strong>, vận hành bởi Osmila N.V. Đại sứ <strong>David Beckham</strong>, hơn 1,000,000 người dùng toàn cầu.</p>
+            </div>
+
+            <!-- Câu 2 -->
+            <div class="faq-card">
+                <h3>▼ Rút tiền có khó không?</h3>
+                <p>Không. Yêu cầu rút được xử lý <strong>dưới 5 phút</strong>, trực tiếp vào ví USDT hoặc phương thức bạn chọn. Không chờ duyệt thủ công.</p>
+            </div>
+
+            <!-- Câu 3 -->
+            <div class="faq-card">
+                <h3>▼ Đăng ký UBOSS như thế nào?</h3>
+                <p>Truy cập <a href="https://97y.me/YujfJ" target="_blank">97y.me/YujfJ</a>, điền thông tin cơ bản, xác minh và bắt đầu chơi ngay trong <strong>5 phút</strong>.</p>
+            </div>
+
+            <!-- Câu 4 -->
+            <div class="faq-card">
+                <h3>▼ UBOSS có bonus chào mừng không?</h3>
+                <p>Có. Tài khoản mới nhận <strong>bonus chào mừng</strong> ngay sau lần nạp đầu. Còn có cashback, World Cup promotion và ưu đãi theo mùa. </p>
+            </div>
+
+            <!-- Câu 5 -->
+            <div class="faq-card">
+                <h3>▼ UBOSS hỗ trợ thanh toán gì?</h3>
+                <p>USDT (TRC20/ERC20), crypto phổ biến và nhiều phương thức địa phương. Rút tiền xử lý trong <strong>dưới 5 phút</strong>.</p>
+            </div>
+
+            <!-- Câu 6 -->
+            <div class="faq-card">
+                <h3>▼ UBOSS có app mobile không?</h3>
+                <p>Có. App mobile iOS & Android, giao diện tối ưu điện thoại, nạp/rút dễ dàng mọi lúc mọi nơi.</p>
+            </div>
+
+            <!-- Câu 7 -->
+            <div class="faq-card">
+                <h3>▼ Chương trình mời bạn bè hoạt động thế nào?</h3>
+                <p>Chia sẻ link → bạn bè đặt cược → bạn nhận <strong>tối đa 0.3%/ngày</strong>. Không giới hạn số người mời. </p>
+            </div>
+
+            <!-- Câu 8 -->
+            <div class="faq-card">
+                <h3>▼ Chương trình VIP của UBOSS như thế nào?</h3>
+                <p>Hệ thống VIP nhiều cấp với <strong>cashback cao hơn</strong>, hạn mức rút lớn hơn, ưu đãi sinh nhật và account manager riêng. </p>
+            </div>
+
+            <!-- Câu 9 -->
+            <div class="faq-card">
+                <h3>▼ UBOSS có những game gì?</h3>
+                <p>Hơn <strong>2,400 slots</strong>, Live Casino dealer thật HD, Cá cược thể thao (SABA, BTI), Esports (LOL, Dota2, CS2), Crypto & 3D Games.</p>
+            </div>
+
+            <!-- Câu 10 -->
+            <div class="faq-card">
+                <h3>▼ UBOSS có hỗ trợ tiếng Việt không?</h3>
+                <p>Có. Hỗ trợ <strong>15 ngôn ngữ</strong> bao gồm Tiếng Việt. </p>
             </div>
 
         </div>
