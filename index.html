@@ -464,6 +464,98 @@
 .badge-new { background-color: #7c4dff; }
 .badge-asia { background-color: #ffa726; color: #000; }
 .badge-fair { background-color: #00e5ff; color: #000; }
+/* --- CSS CHO KHỐI CHỨNG NHẬN PHÁP LÝ --- */
+.legal-section {
+    padding: 60px 20px;
+    width: 100%;
+    background-color: #05070c; /* Đồng bộ nền tối */
+    box-sizing: border-box;
+}
+
+.legal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề có vạch xanh sọc đứng ở đầu */
+.legal-main-title {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: left;
+    border-left: 4px solid #00e5ff; /* Vạch xanh định vị thương hiệu */
+    padding-left: 15px;
+}
+
+.legal-sub-title {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 19px; /* Thụt lề bằng với tiêu đề */
+}
+
+/* Chia lưới 3 cột đều nhau */
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Ô Card pháp lý có viền vàng trên đỉnh */
+.legal-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 3px solid #ffc107; /* Viền vàng điểm nhấn trên đầu */
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.legal-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.1);
+}
+
+/* Khung bọc ảnh chứng nhận trắng tinh */
+.legal-img-wrapper {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 15px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.legal-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Phần chữ bên dưới ảnh */
+.legal-info h3 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    letter-spacing: 0.5px;
+}
+
+.legal-info p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify; /* Căn đều hai bên chữ nhìn cho ngay ngắn */
+}
     </style>
 
     <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
@@ -610,6 +702,45 @@
                     </div>
                     <p class="game-highlight highlight-blue">On-Chain</p>
                     <p class="game-desc">Aviator · HILO · DICE · KENO · Scribe</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="legal-section">
+    <div class="legal-container">
+        <h2 class="legal-main-title">🛡️ UBOSS- CHỨNG NHẬN PHÁP LÝ QUỐC TẾ</h2>
+        <p class="legal-sub-title">UBOSS89 vận hành minh bạch dưới sự quản lý và cấp phép nghiêm ngặt của các tổ chức cá cược tối cao toàn cầu.</p>
+
+        <div class="legal-grid">
+            
+            <div class="legal-card">
+                <div class="legal-img-wrapper">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=example" alt="Curacao Egaming"> </div>
+                <div class="legal-info">
+                    <h3>CURAÇAO EGAMING</h3>
+                    <p>UBOSS được Cục Quản lý Giải trí và Trò chơi Curaçao Gaming cấp phép hoạt động sảnh trực tuyến quốc tế (Giấy phép số: OGL-26/004).</p>
+                </div>
+            </div>
+
+            <div class="legal-card">
+                <div class="legal-img-wrapper">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=example" alt="Isle of Man">
+                </div>
+                <div class="legal-info">
+                    <h3>ISLE OF MAN GSC</h3>
+                    <p>UBOSS được Ủy ban Giám sát Cờ bạc Đảo Man thuộc Vương quốc Anh bảo hộ, đảm bảo 100% thuật toán kết quả ngẫu nhiên sạch.</p>
+                </div>
+            </div>
+
+            <div class="legal-card">
+                <div class="legal-img-wrapper">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=example" alt="Malta Authority">
+                </div>
+                <div class="legal-info">
+                    <h3>MALTA AUTHORITY</h3>
+                    <p>Cơ quan cấp phép trò chơi MGA Châu Âu chứng nhận nền tảng đủ tiềm lực tài chính thanh khoản không giới hạn.</p>
                 </div>
             </div>
 
