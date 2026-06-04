@@ -247,6 +247,100 @@
             width: 20px; /* Làm chấm tròn dài ra chút nhìn cho sang */
             border-radius: 5px;
         }
+  /* --- CSS CHO PHẦN CAMPAIGN THIẾT KẾ MỚI --- */
+
+/* Khung bao ngoài cùng tràn màn hình */
+.campaign-section {
+    padding: 80px 20px;
+    width: 100%;
+    display: block;
+    background: linear-gradient(135deg, #0f172a 0%, #05070c 100%);
+    box-sizing: border-box;
+    clear: both;
+}
+
+/* Khung giới hạn độ rộng để nội dung gom vào giữa gọn gàng */
+.campaign-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Tag vàng nhỏ trên cùng */
+.campaign-badge {
+    display: inline-block;
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    margin-bottom: 25px;
+}
+
+/* Tiêu đề lớn */
+.campaign-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+/* Đoạn văn mô tả */
+.campaign-desc {
+    font-size: 16px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* Chúa tể nút bấm - Nút màu vàng */
+.campaign-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffb300, #ffca28);
+    color: #000000 !important;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+.campaign-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+}
+
+/* Dòng chữ nhỏ dưới nút */
+.campaign-subtext {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+/* Khối bọc các tag dưới cùng nằm ngang */
+.campaign-tags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap; /* Tự động xuống dòng mượt mà nếu xem trên điện thoại */
+}
+
+/* Từng ô tag nhỏ */
+.tag-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
     </style>
 
     <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
@@ -280,8 +374,33 @@
         })();
     </script>
     </div>
+<div class="slider-wrapper">
+    <div class="slider-container" id="mainSlider">
+        </div>
+</div>
 
+<section class="campaign-section">
+    <div class="campaign-container">
+        <div class="campaign-badge">🏆 WORLD CUP 2026 — CAMPAIGN CHÍNH THỨC</div>
+        
+        <h1 class="campaign-title">Dự Đoán Nhà Vô Địch Nhận<br>100,000 USDT</h1>
+        
+        <p class="campaign-desc">Đặt cược thể thao cùng UBOSS — nền tảng quốc tế được cấp phép bởi Curaçao Gaming Control Board</p>
+        
+        <a href="#" class="campaign-btn">🎮 THAM GIA NGAY</a>
+        
+        <p class="campaign-subtext">Đăng ký miễn phí · Nạp/rút phí 0%</p>
+        
+        <div class="campaign-tags">
+            <span class="tag-item">🔥 Hoàn trả thể thao x2</span>
+            <span class="tag-item">👥 Rủ bạn → +0.3%</span>
+            <span class="tag-item">⚡ Nạp rút 30 giây</span>
+            <span class="tag-item">🏅 VIP xuyên nền tảng</span>
+        </div>
+    </div>
+</section>
 </body>
 </html>
+
 
 
