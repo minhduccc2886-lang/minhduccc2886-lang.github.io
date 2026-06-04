@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBOSS Official</title>
+    <title>UBOSS Official Site</title>
     <style>
         body {
             background-color: #05070c;
@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px 0 0 0;
-            overflow-x: hidden;
         }
 
         .container {
@@ -46,7 +45,7 @@
             background-color: #0b111e;
             border-radius: 8px 8px 0 0;
             padding: 12px 20px;
-            display: block;
+            display: flex;
             justify-content: space-between;
             align-items: center;
         }
@@ -124,267 +123,45 @@
             height: auto;
             display: block;
         }
-
-    <style>
-    /* Container chứa slider */
-/* Khung bọc ngoài (Cửa sổ nhìn) - Phải có overflow: hidden */
-.slider-wrapper {
-    width: 100%; 
-    height: 350px
-    overflow: hidden;      /* Cắt bỏ mọi thứ dư thừa */
-    position: relative;
-    margin-top: 30px;
-}
-
-/* Đường ray chứa 5 ảnh - Phải rộng 500% */
-.slider-container {
-    display: flex;         /* Dùng flex để dàn hàng ngang */
-    width: 500%;           /* 5 ảnh = 500% */
-    transition: transform 0.6s ease-in-out;
-}
-
-    /* Mỗi slide chiếm 20% chiều rộng (100 chia 5 ảnh) */
-    .slide {
-        width: 20%; 
-    }
-
-    .slide img {
-        width: 100%;
-        height: 100%
-        object-fit: cover; 
-        display: block;
-    }
-
-    /* Hiệu ứng trượt */
- @keyframes slide-animation {
-    0% { transform: translateX(0%); }
-    20% { transform: translateX(0%); } /* Dừng 1 chút ở ảnh 1 */
-    25% { transform: translateX(-20%); } /* Chuyển sang ảnh 2 */
-    45% { transform: translateX(-20%); }
-    50% { transform: translateX(-40%); } /* Chuyển sang ảnh 3 */
-    70% { transform: translateX(-40%); }
-    75% { transform: translateX(-60%); } /* Chuyển sang ảnh 4 */
-    95% { transform: translateX(-60%); }
-    100% { transform: translateX(-80%); } /* Về lại ảnh đầu */
-}
-      .stats-bar {
-    display: flex;
-    flex-wrap: wrap;         /* Giúp tự động xuống dòng khi màn hình nhỏ */
-    justify-content: center; /* Căn giữa các item */
-    gap: 20px;               /* Khoảng cách giữa các ô thông số */
-    padding: 20px;
-    background-color: #1a1a1a;
-    color: white;
-}
-
-.stat-item {
-    flex: 1 1 150px;         /* Tự co giãn, tối thiểu 150px mỗi ô */
-    text-align: center;
-    margin: 10px;            /* Thêm khoảng cách nếu cần */
-}  
-      .campaign-section {
-    padding: 60px 20px;
-    width: 100%
-    Display: block;    
-    text-align: center;
-    background: linear-gradient(135deg, #0f172a 0%, #05070c 100%); /* Hiệu ứng nền tối */
-}
-
-.badge {
-    background: #fbbf24;
-    color: #000;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.cta-button {
-    background-color: #fbbf24;
-    color: #000;
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin: 20px 0;
-}
-
-.features-list span {
-    margin: 0 10px;
-    padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}  
-</style>
-   
-        </div>
-  <!-- Các dấu chấm tròn nhỏ định vị dưới banner -->
-        <div class="slider-dots" id="sliderDots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-
-
-    <!-- PHẦN STYLE TRANG TRÍ CHO BANNER CHẠY MƯỢT (CSS) -->
-    <style>
-        .slider-wrapper {
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-            margin-top: 10px; /* Khoảng cách với khối bên trên */
-        }
-        .slider-container {
-    width: 100%;       /* Khung chỉ rộng đúng bằng màn hình */
-    max-width: 950px;  /* Tùy chỉnh độ rộng tối đa */
-    margin: 20px auto; /* Căn giữa */
-    overflow: hidden;  /* ĐÂY CHÍNH LÀ CHÌA KHÓA: Nó sẽ cắt bỏ những gì tràn ra ngoài */
-    border-radius: 12px;
-}
-        .slide {
-            display: table-cell;
-            width: 20%; /* Mỗi ảnh chiếm 1 phần đều nhau (100% / 5 ảnh = 20%) */
-            vertical-align: top;
-        }
-        .slide img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* Style cho các nút chấm tròn nhỏ */
-        .slider-dots {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-        }
-        .dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dot.active {
-            background-color: #00ffcc; /* Màu xanh neon trùng tông nút Đăng Ký của bạn */
-            width: 20px; /* Làm chấm tròn dài ra chút nhìn cho sang */
-            border-radius: 5px;
-        }
-
-
-    .stat-number {
-        display: block;
-        font-size: 24px;
-        font-weight: bold;
-        color: #00ffcc;
-    }
-    .stat-label {
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #aaaaaa;
-        margin-top: 5px;
-    }
-</style>
-
+    </style>
+</head>
 <body>
+
     <div class="container">
+        <!-- Bộ chữ tiếng Anh chuyên nghiệp mới -->
         <div class="brand-title">UBOSS</div>
+        <div class="sub-title">Official Affiliate Network | Secure & Ultra-Fast USDT Withdrawals 24/7</div>
+        <div class="main-heading">UBOSS | Globally Licensed Platform | Elite Sportsbook & Live Casino</div>
+
+        <!-- Thanh Menu Logo + Nút điều hướng -->
         <div class="navbar">
             <div class="logo">💎 UBOSS</div>
             <div class="nav-buttons">
+                <!-- NHỚ THAY LINK TELE VÀ LINK ĐĂNG KÝ CỦA BẠN VÀO ĐÂY NHA -->
                 <a href="https://t.me/Jenniii666" class="btn btn-cskh">💬 CSKH</a>
                 <a href="https://97y.me/YujfJ" class="btn btn-register">🎮 Đăng Ký</a>
             </div>
         </div>
-    </div>
 
-    <div class="slider-wrapper">
-        <div class="slider-container" id="mainSlider">
-            </div>
-    </div>
-
-    <section class="campaign-section">
-        </section>
-</body> 
-
-           <!-- Hàng nút chọn 15 ngôn ngữ quốc tế -->
+        <!-- Hàng nút chọn ngôn ngữ -->
         <div class="lang-bar">
             <a href="#" class="lang-btn active">Tiếng Việt</a>
             <a href="#" class="lang-btn">English</a>
-            <a href="#" class="lang-btn">简体中文</a>S
+            <a href="#" class="lang-btn">简体中文</a>
             <a href="#" class="lang-btn">한국어</a>
             <a href="#" class="lang-btn">日本語</a>
-            <a href="#" class="lang-btn">ภาษาไทย</a>
-            <a href="#" class="lang-btn">Bahasa Indonesia</a>
-            <a href="#" class="lang-btn">Português</a>
-            <a href="#" class="lang-btn">Español</a>
-            <a href="#" class="lang-btn">Deutsch</a>
-            <a href="#" class="lang-btn">Français</a>
-            <a href="#" class="lang-btn">Русский</a>
             <a href="#" class="lang-btn">Türkçe</a>
-            <a href="#" class="lang-btn">Filipino</a>
-  
-        <body>
-<!-- KHỐI BANNER CHẠY LƯỚT TỰ ĐỘNG -->
-<div class="slider-container">
-    <div class="slider-wrapper">
-        <!-- Ảnh 1 -->
-        <div class="slide"><img src="https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/main/photo_2026-06-03_14-31-59.jpg" alt="Banner 1"></div>
-        <!-- Ảnh 2 -->
-        <div class="slide"><img src="https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/main/photo_2026-06-03_14-32-06.jpg" alt="Banner 2"></div>
-        <!-- Ảnh 3 -->
-        <div class="slide"><img src="https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/main/photo_2026-06-03_14-32-21.jpg" alt="Banner 3"></div>
-        <!-- Ảnh 4 -->
-        <div class="slide"><img src="https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/main/photo_2026-06-03_14-32-32.jpg" alt="Banner 4"></div>
-        <!-- Ảnh 5 -->
-        <div class="slide"><img src="https://raw.githubusercontent.com/minhduccc2886-lang/minhduccc2886-lang.github.io/main/photo_2026-06-03_14-33-12.jpg" alt="Banner 5"></div>
+            <a href="#" class="lang-btn">Español</a>
+        </div>
     </div>
 
-    <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
-    <script>
-        (function() {
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-            const sliderContainer = document.getElementById('mainSlider');
-            const dots = document.querySelectorAll('.dot');
+    <!-- Khối banner hình ảnh dưới cùng -->
+    <div class="banner-container">
+        <!-- KHI NÀO CÓ ẢNH AI THÌ ĐỔI CÁI LINK TRONG NGOẶC KÉP NÀY NHA -->
+        <img src="https://via.placeholder.com/1920x640" alt="UBOSS Live Casino Banner">
+    </div>
 
-            function changeSlide() {
-                currentIndex++;
-                if (currentIndex >= totalSlides) {
-                    currentIndex = 0; // Chạy hết 5 tấm thì tự động quay về tấm đầu tiên
-                }
-                
-                // Tính toán khoảng cách lướt sang trái theo phần trăm
-                let translateValue = -(currentIndex * 20); 
-                sliderContainer.style.transform = `translateX(${translateValue}%)`;
-                
-                // Cập nhật trạng thái dấu chấm tròn active
-                dots.forEach(dot => dot.classList.remove('active'));
-                if (dots[currentIndex]) {
-                    dots[currentIndex].classList.add('active');
-                }
-            }
-
-            // Cứ mỗi 3000ms (3 giây) là ảnh tự động lướt lướt qua tấm tiếp theo
-            setInterval(changeSlide, 3000);
-       
-    </script>
-
+</body>
+</html>
 
 
