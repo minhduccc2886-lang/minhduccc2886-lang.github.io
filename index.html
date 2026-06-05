@@ -408,7 +408,80 @@
                 <span class="slot-status-icon">🎮</span> <span class="slot-status-count">789</span> Người đang chơi
             </div>
         </div>
+<!-- KHU VỰC DANH MỤC CRYPTO GAMES TRỌN BỘ -->
+<div class="crypto-lobby-section">
+    
+    <!-- Tiêu đề mục: Crypto Games (Có icon đồng xu Bitcoin) -->
+    <div class="crypto-header">
+        <span class="crypto-icon">🪙</span>
+        <h2 class="crypto-main-title">Crypto Games</h2>
+    </div>
 
+    <!-- Khung chứa lưới các thẻ game Crypto -->
+    <div class="crypto-grid-container">
+        
+        <!-- 1. Cash Show -->
+        <div class="crypto-card-wrapper">
+            <div class="crypto-card provider-galaxsys">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/20786.webp?raw=true" alt="Cash Show" class="crypto-img">
+                <div class="crypto-overlay">                   
+                </div>
+            </div>
+            <div class="crypto-status">
+                <span class="crypto-status-icon">🎮</span> <span class="crypto-status-count">1,837</span> Người đang chơi
+            </div>
+        </div>
+
+        <!-- 2. Aviatrix -->
+        <div class="crypto-card-wrapper">
+            <div class="crypto-card provider-aviatrix">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/nft-aviatrix.webp?raw=true" alt="Aviatrix" class="crypto-img">
+                <div class="crypto-overlay">
+                </div>
+            </div>
+            <div class="crypto-status">
+                <span class="crypto-status-icon">🎮</span> <span class="crypto-status-count">789</span> Người đang chơi
+            </div>
+        </div>
+
+        <!-- 3. Chicken Road 2 -->
+        <div class="crypto-card-wrapper">
+            <div class="crypto-card provider-splus-purple">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/427.webp?raw=true" alt="Chicken Road 2" class="crypto-img">
+                <div class="crypto-overlay">
+                </div>
+            </div>
+            <div class="crypto-status">
+                <span class="crypto-status-icon">🎮</span> <span class="crypto-status-count">4,588</span> Người đang chơi
+            </div>
+        </div>
+
+        <!-- 4. Crash -->
+        <div class="crypto-card-wrapper">
+            <div class="crypto-card provider-splus-orange">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/419.webp?raw=true" alt="Crash" class="crypto-img">
+                <div class="crypto-overlay">
+                </div>
+            </div>
+            <div class="crypto-status">
+                <span class="crypto-status-icon">🎮</span> <span class="crypto-status-count">1,444</span> Người đang chơi
+            </div>
+        </div>
+
+        <!-- 5. Limbo -->
+        <div class="crypto-card-wrapper">
+            <div class="crypto-card provider-splus-blue">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/415.webp?raw=true" alt="Limbo" class="crypto-img">
+                <div class="crypto-overlay">
+                </div>
+            </div>
+            <div class="crypto-status">
+                <span class="crypto-status-icon">🎮</span> <span class="crypto-status-count">3,409</span> Người đang chơi
+            </div>
+        </div>
+
+    </div> <!-- Kết thúc lưới crypto-grid-container -->
+</div> <!-- Kết thúc sảnh crypto-lobby-section -->
 </div>
     <!-- PHẦN STYLE TRANG TRÍ CHO BANNER CHẠY MƯỢT (CSS) -->
     <style>
@@ -1348,6 +1421,89 @@
     .slot-title {
         font-size: 13px !important;
     }
+/* --- CSS CHO SẢNH CRYPTO GAMES TRỌN BỘ --- */
+.crypto-lobby-section {
+    background-color: #0d1117; 
+    padding: 20px 40px 40px 40px;
+    clear: both;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.crypto-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.crypto-main-title {
+    color: #4fe3ff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+.crypto-grid-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+.crypto-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+.crypto-card {
+    position: relative;
+    width: 210px; 
+    height: 290px; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+.crypto-card:hover {
+    transform: translateY(-6px);
+}
+.crypto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.crypto-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.crypto-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0 0 6px 0;
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+}
+.crypto-provider { color: #ffffff; font-size: 11px; font-weight: 700; margin: 0; opacity: 0.8; }
+.crypto-status { margin-top: 10px; font-size: 12px; color: #8492a6; }
+.crypto-status-count { color: #4fe3ff; font-weight: 700; }
+
+/* Tối ưu riêng sảnh Crypto khi xem bằng Điện thoại */
+@media screen and (max-width: 768px) {
+    .crypto-lobby-section { padding: 15px 15px 30px 15px !important; }
+    .crypto-grid-container { justify-content: space-between !important; gap: 12px 10px !important; }
+    .crypto-card-wrapper { width: calc(50% - 5px) !important; }
+    .crypto-card { width: 100% !important; height: 220px !important; }
+    .crypto-title { font-size: 13px !important; }
+}
 }
     </style>
 
