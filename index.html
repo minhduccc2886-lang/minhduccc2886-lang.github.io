@@ -1320,6 +1320,35 @@
     margin-top: 20px;
     display: inline-block;
 }
+ /* --- TỐI ƯU GIAO DIỆN SLOTS CHO ĐIỆN THOẠI (RESPONSIVE) --- */
+@media screen and (max-width: 768px) {
+    /* Thu nhỏ khoảng cách viền 2 bên trên mobile cho rộng chỗ */
+    .slots-lobby-section {
+        padding: 15px 15px 30px 15px !important;
+    }
+
+    /* Chia đều khoảng trống cho các card */
+    .slots-grid-container {
+        justify-content: space-between !important;
+        gap: 12px 10px !important; /* Khoảng cách dọc 12px, ngang 10px */
+    }
+
+    /* Ép mỗi hàng chỉ chứa đúng 2 thẻ game */
+    .slot-card-wrapper {
+        width: calc(50% - 5px) !important; /* Mỗi card chiếm gần 1 nửa màn hình */
+    }
+
+    /* Cho chiều rộng của card tự co giãn theo khung 50% */
+    .slot-card {
+        width: 100% !important;
+        height: 220px !important; /* Thu nhỏ chiều cao trên mobile cho cân đối */
+    }
+
+    /* Thu nhỏ font chữ tiêu đề game trên mobile để không bị tràn dòng */
+    .slot-title {
+        font-size: 13px !important;
+    }
+}
     </style>
 
     <!-- ĐOẠN SCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHẠY BANNER (JAVASCRIPT) -->
