@@ -628,6 +628,166 @@
     color: #4fe3ff; /* Số người chơi nổi lên với màu xanh neon */
     font-weight: 700;
 }
+    /* Tổng thể khu vực sảnh Slots */
+.slots-lobby-section {
+    background-color: #0d1117; 
+    padding: 20px 40px 40px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề mục Slots */
+.slots-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.slots-icon {
+    font-size: 24px;
+}
+.slots-main-title {
+    color: #4fe3ff; /* Màu xanh ngọc nhạt */
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Lưới chứa các thẻ game tự động xuống hàng khi đủ 6 thẻ */
+.slots-grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép tự động xuống hàng tạo thành hàng 2 */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* Khối bao bọc thẻ và dòng trạng thái số người chơi Slots */
+.slot-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Cấu trúc thẻ game Slots */
+.slot-card {
+    position: relative;
+    width: 210px; /* Bằng size với thẻ Thể Thao để thẳng hàng tăm tắp */
+    height: 290px; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.slot-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(79, 227, 255, 0.25);
+}
+
+/* Ảnh game */
+.slot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lớp phủ thông tin chữ dưới đáy */
+.slot-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Tên game Slots */
+.slot-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0 0 6px 0;
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+    line-height: 1.2;
+}
+
+/* Nhà cung cấp game (PG SOFT, JILI...) */
+.slot-provider {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* --- ĐỔ MÀU GRADIENT TỪNG CARD THEO MẪU --- */
+/* Nâu đen (Wild Bounty) */
+.provider-pg .slot-overlay {
+    background: linear-gradient(to top, rgba(74, 46, 26, 0.98) 0%, rgba(74, 46, 26, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Đỏ hồng (Muscle Cat) */
+.provider-fc .slot-overlay {
+    background: linear-gradient(to top, rgba(186, 12, 47, 0.95) 0%, rgba(186, 12, 47, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Tím hồng (CNY Moreways) */
+.provider-fc-purple .slot-overlay {
+    background: linear-gradient(to top, rgba(131, 56, 236, 0.95) 0%, rgba(131, 56, 236, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Đỏ nâu tía (Treasures of Aztec) */
+.provider-pg-red .slot-overlay {
+    background: linear-gradient(to top, rgba(114, 14, 14, 0.95) 0%, rgba(114, 14, 14, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Nâu vàng sẫm (Mahjong Ways 2) */
+.provider-pg-brown .slot-overlay {
+    background: linear-gradient(to top, rgba(101, 67, 33, 0.95) 0%, rgba(101, 67, 33, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Vàng đồng cát (Mahjong Ways) */
+.provider-pg-gold .slot-overlay {
+    background: linear-gradient(to top, rgba(154, 112, 16, 0.95) 0%, rgba(154, 112, 16, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Xanh lá sáng (Super Ace) */
+.provider-jili-green .slot-overlay {
+    background: linear-gradient(to top, rgba(0, 143, 57, 0.95) 0%, rgba(0, 143, 57, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Cam cháy (Mayan Gods) */
+.provider-rt-orange .slot-overlay {
+    background: linear-gradient(to top, rgba(184, 61, 0, 0.95) 0%, rgba(184, 61, 0, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Xanh tím nhạt (Candy Baby) */
+.provider-jili-purple .slot-overlay {
+    background: linear-gradient(to top, rgba(94, 60, 230, 0.95) 0%, rgba(94, 60, 230, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Vàng cam sáng (5 Families) */
+.provider-rt-gold .slot-overlay {
+    background: linear-gradient(to top, rgba(212, 143, 0, 0.95) 0%, rgba(212, 143, 0, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* Xanh lá đậm (Tiger Gems) */
+.provider-bng-green .slot-overlay {
+    background: linear-gradient(to top, rgba(0, 110, 43, 0.95) 0%, rgba(0, 110, 43, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Dòng số người chơi dưới mỗi card Slots */
+.slot-status {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #8492a6;
+    font-weight: 500;
+}
+.slot-status-icon {
+    font-size: 13px;
+}
+.slot-status-count {
+    color: #4fe3ff;
+    font-weight: 700;
+}
         /* --- CSS CHO PHẦN CAMPAIGN THIẾT KẾ MỚI --- */
 
 /* Khung bao ngoài cùng tràn màn hình */
