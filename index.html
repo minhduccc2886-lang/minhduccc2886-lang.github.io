@@ -204,7 +204,82 @@
             <span class="dot"></span>
         </div>
     </div>
+<div class="sports-lobby-section">
+    
+    <div class="lobby-header">
+        <span class="lobby-icon">👑⚽</span>
+        <h2 class="lobby-main-title">Thể thao</h2>
+    </div>
 
+    <div class="game-container">
+        
+        <div class="game-card-wrapper">
+            <div class="game-card card-saba">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/saba_uboss.webp?raw=true" alt="SABA Sports" class="game-img">
+                <div class="game-overlay">
+                    <h3 class="game-title">SABA Sports</h3>
+                    <p class="game-category">THỂ THAO</p>
+                </div>
+            </div>
+            <div class="game-status">
+                <span class="status-icon">🎮</span> <span class="status-count">2,754</span> Người đang chơi
+            </div>
+        </div>
+
+        <div class="game-card-wrapper">
+            <div class="game-card card-im">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/im.webp?raw=true" alt="IM Sports" class="game-img">
+                <div class="game-overlay">
+                    <h3 class="game-title">IM Sports</h3>
+                    <p class="game-category">THỂ THAO</p>
+                </div>
+            </div>
+            <div class="game-status">
+                <span class="status-icon">🎮</span> <span class="status-count">3,802</span> Người đang chơi
+            </div>
+        </div>
+
+        <div class="game-card-wrapper">
+            <div class="game-card card-ap">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/apsport.webp?raw=true" alt="AP Sports" class="game-img">
+                <div class="game-overlay">
+                    <h3 class="game-title">AP Sports</h3>
+                    <p class="game-category">THỂ THAO</p>
+                </div>
+            </div>
+            <div class="game-status">
+                <span class="status-icon">🎮</span> <span class="status-count">3,278</span> Người đang chơi
+            </div>
+        </div>
+
+        <div class="game-card-wrapper">
+            <div class="game-card card-sbo">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/sbo.webp?raw=true" alt="SBO Sports" class="game-img">
+                <div class="game-overlay">
+                    <h3 class="game-title">SBO Sports</h3>
+                    <p class="game-category">THỂ THAO</p>
+                </div>
+            </div>
+            <div class="game-status">
+                <span class="status-icon">🎮</span> <span class="status-count">3,802</span> Người đang chơi
+            </div>
+        </div>
+
+        <div class="game-card-wrapper">
+            <div class="game-card card-panda">
+                <img src="https://github.com/minhduccc2886-lang/minhduccc2886-lang.github.io/blob/main/panda.webp?raw=true" alt="Panda Sports" class="game-img">
+                <div class="game-overlay">
+                    <h3 class="game-title">Panda Sports</h3>
+                    <p class="game-category">THỂ THAO</p>
+                </div>
+            </div>
+            <div class="game-status">
+                <span class="status-icon">🎮</span> <span class="status-count">4,326</span> Người đang chơi
+            </div>
+        </div>
+
+    </div>
+</div>
     <!-- PHẦN STYLE TRANG TRÍ CHO BANNER CHẠY MƯỢT (CSS) -->
     <style>
         .slider-wrapper {
@@ -252,7 +327,143 @@
             width: 20px; /* Làm chấm tròn dài ra chút nhìn cho sang */
             border-radius: 5px;
         }
-  /* --- CSS CHO PHẦN CAMPAIGN THIẾT KẾ MỚI --- */
+ /* Tổng thể khu vực sảnh */
+.sports-lobby-section {
+    background-color: #0d1117; /* Nền đen tối đồng bộ web xanh đen */
+    padding: 30px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề mục Thể thao */
+.lobby-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.lobby-icon {
+    font-size: 24px;
+}
+.lobby-main-title {
+    color: #4fe3ff; /* Màu xanh neon nhạt chuẩn phom sảnh game */
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Khung chứa 5 sảnh xếp hàng ngang */
+.game-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px; /* Khoảng cách giữa các thẻ */
+    overflow-x: auto; /* Tự động tạo thanh cuộn nếu màn hình nhỏ */
+    padding-bottom: 15px;
+}
+
+/* Khối bao gồm cả Thẻ và dòng Số người chơi */
+.game-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0; /* Giữ nguyên phom thẻ, không bị bóp méo */
+}
+
+/* Cấu trúc thẻ game */
+.game-card {
+    position: relative;
+    width: 210px; /* Chỉnh lại size thon gọn chuẩn tỷ lệ ảnh mẫu */
+    height: 310px; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 168, 45, 0.3);
+}
+
+/* Ảnh cầu thủ */
+.game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lớp phủ chữ chung */
+.game-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Font chữ tên sảnh dày mạnh mẽ */
+.game-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 0 8px 0;
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Chữ SPORTS / THỂ THAO nhỏ bên dưới */
+.game-category {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1.5px;
+    opacity: 0.85;
+}
+
+/* --- ĐỔ MÀU GRADIENT RIÊNG BIỆT CHO TỪNG SẢNH Y CHANG ẢNH MẪU --- */
+/* 1. SABA Sports - Xanh Lá */
+.card-saba .game-overlay {
+    background: linear-gradient(to top, rgba(0, 168, 45, 0.95) 0%, rgba(0, 168, 45, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* 2. IM Sports - Xanh Dương */
+.card-im .game-overlay {
+    background: linear-gradient(to top, rgba(0, 81, 204, 0.95) 0%, rgba(0, 81, 204, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* 3. AP Sports - Đen Xám */
+.card-ap .game-overlay {
+    background: linear-gradient(to top, rgba(20, 20, 20, 0.98) 0%, rgba(30, 30, 30, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* 4. SBO Sports - Vàng Đồng */
+.card-sbo .game-overlay {
+    background: linear-gradient(to top, rgba(166, 124, 0, 0.95) 0%, rgba(166, 124, 0, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+/* 5. Panda Sports - Xanh Ngọc */
+.card-panda .game-overlay {
+    background: linear-gradient(to top, rgba(0, 140, 128, 0.95) 0%, rgba(0, 140, 128, 0.6) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Dòng số người chơi phía dưới thẻ */
+.game-status {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #8492a6; /* Màu xám chữ nhỏ */
+    font-weight: 500;
+}
+.status-icon {
+    font-size: 13px;
+}
+.status-count {
+    color: #4fe3ff; /* Số người chơi nổi lên với màu xanh neon */
+    font-weight: 700;
+}
+        /* --- CSS CHO PHẦN CAMPAIGN THIẾT KẾ MỚI --- */
 
 /* Khung bao ngoài cùng tràn màn hình */
 .campaign-section {
