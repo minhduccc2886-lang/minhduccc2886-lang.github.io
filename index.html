@@ -560,12 +560,32 @@
 /* Lưới chứa các thẻ game tự động xuống hàng khi đủ 6 thẻ */
 .slots-grid-container {
     display: flex;
-    flex-wrap: wrap; /* Cho phép tự động xuống hàng tạo thành hàng 2 */
+    flex-direction: row;              /* Ép các game xếp chung 1 hàng ngang */
+    flex-wrap: nowrap;                /* KHÔNG cho tự động xuống hàng nữa */
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
+    overflow-x: auto;                 /* Bật tính năng trượt ngang khi thừa game */
+    overflow-y: hidden;               /* Ẩn trượt dọc không cần thiết */
+    padding-bottom: 15px;             /* Tạo khoảng trống nhỏ với thanh cuộn */
+    scroll-behavior: smooth;          /* Hiệu ứng trượt mượt mà */
+    -webkit-overflow-scrolling: touch; /* Vuốt mượt hơn trên điện thoại */
 }
 
+/* Tùy chỉnh thanh cuộn (scrollbar) sảnh Slots cho giống sảnh Thể thao */
+.slots-grid-container::-webkit-scrollbar {
+    height: 8px;                      /* Độ dày thanh cuộn ngang */
+}
+
+.slots-grid-container::-webkit-scrollbar-track {
+    background: #0d1117;              /* Màu nền đường ray */
+    border-radius: 4px;
+}
+
+.slots-grid-container::-webkit-scrollbar-thumb {
+    background: #4b5563;              /* Màu của cục cuộn */
+    border-radius: 4px;
+}
 /* Khối bao bọc thẻ và dòng trạng thái số người chơi Slots */
 .slot-card-wrapper {
     display: flex;
