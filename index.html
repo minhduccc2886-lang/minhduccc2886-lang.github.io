@@ -137,6 +137,50 @@
             height: auto;
             display: block;
         }
+/* ===================================================
+   CSS ĐỒNG BỘ NÚT "TẤT CẢ" VÀ TIÊU ĐỀ CÁC SẢNH GAME
+====================================================== */
+
+/* Khối bọc tiêu đề và nút: Đẩy chữ sang trái, nút sang phải */
+.sảnh-header-block {
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 phần tử về 2 đầu rìa */
+    align-items: center;            /* Căn giữa cho chữ và nút thẳng hàng nhau */
+    margin-top: 35px;               /* Khoảng cách với sảnh phía trên */
+    margin-bottom: 15px;            /* Khoảng cách từ tiêu đề xuống các card game */
+}
+
+/* Chữ tiêu đề sảnh game */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4fe3ff;                 /* Màu xanh cyan neon xịn mịn */
+    margin: 0;                      /* Xóa bỏ margin mặc định */
+    display: flex;
+    align-items: center;
+    gap: 10px;                      /* Khoảng cách giữa icon và chữ */
+}
+
+/* Nút "Tất cả" màu xanh ngọc */
+.see-all-link {
+    text-decoration: none;          /* Bỏ gạch chân của link */
+}
+
+.see-all-btn {
+    background-color: #178287;      /* Màu xanh ngọc giống ảnh của bro */
+    color: #ffffff;
+    border: none;
+    padding: 6px 18px;              /* Độ rộng vừa vặn cho nút */
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;             /* Bo góc mềm mại */
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.see-all-btn:hover {
+    background-color: #1eb5bd;      /* Rê chuột vào thì sáng bừng lên kích thích click */
+}
     </style>
 </head>
 <body>
@@ -215,11 +259,12 @@
     </div>
 <div class="sports-lobby-section">
     
-    <div class="lobby-header">
-        <span class="lobby-icon">👑⚽</span>
-        <h2 class="lobby-main-title">Thể thao</h2>
-    </div>
-
+ <div class="sảnh-header-block">
+    <h2 class="section-title">👑⚽ Thể thao</h2>
+    <a href="https://97y.me/YujfJ" target="_blank" class="see-all-link">
+        <button class="see-all-btn">Tất cả</button>
+    </a>
+</div>
     <div class="game-container">
            <a href="https://97y.me/YujfJ" target="_blank" style="text-decoration: none; display: block;">
         <div class="game-card-wrapper">
@@ -285,12 +330,13 @@
         <!-- KHU VỰC DANH MỤC NỔ HŨ (SLOTS) TRỌN BỘ -->
 <div class="slots-lobby-section">
     <!-- Tiêu đề mục: Slots (Có icon đồng xu) -->
-    <div class="slots-header">
-        <span class="slots-icon">🪙</span>
-        <h2 class="slots-main-title">Slots</h2>
-    </div>
-
-    <!-- Khung chứa lưới các thẻ game Slots -->
+  <div class="sảnh-header-block">
+    <h2 class="section-title">🎰 Slots</h2>
+    <a href="https://97y.me/YujfJ" target="_blank" class="see-all-link">
+        <button class="see-all-btn">Tất cả</button>
+    </a>
+</div>
+   <!-- Khung chứa lưới các thẻ game Slots -->
     <div class="slots-grid-container">
         
         <!-- 1. Wild Bounty Showdown -->
@@ -362,9 +408,13 @@
 <!-- ================= SẢNH LIVE CASINO ================= -->
 <div class="casino-section">
     <!-- Tiêu đề sảnh chuẩn SEO H2 -->
+ <div class="sảnh-header-block">
     <h2 class="section-title">💁‍♀️ Live Casino</h2>
-
-    <!-- Khung chứa lưới hỗ trợ trượt ngang -->
+    <a href="https://97y.me/YujfJ" target="_blank" class="see-all-link">
+        <button class="see-all-btn">Tất cả</button>
+    </a>
+</div>
+   <!-- Khung chứa lưới hỗ trợ trượt ngang -->
     <div class="casino-grid-container">
 
         <!-- CARD 1: THREECARD - DG LIVE -->
@@ -437,8 +487,12 @@
 <!-- ================= SẢNH CRYPTO GAMES ================= -->
 <div class="crypto-section">
     <!-- Tiêu đề sảnh kèm icon đồng xu chuẩn SEO -->
+   <div class="sảnh-header-block">
     <h2 class="section-title">🪙 Crypto Games</h2>
-
+    <a href="https://97y.me/YujfJ" target="_blank" class="see-all-link">
+        <button class="see-all-btn">Tất cả</button>
+    </a>
+</div>
     <!-- Khung chứa lưới hỗ trợ trượt ngang -->
     <div class="crypto-grid-container">
 
